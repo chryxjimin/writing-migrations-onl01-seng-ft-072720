@@ -13,10 +13,6 @@ if ENV["SCHOOL_ENV"] == "test"
   ActiveRecord::Migration.verbose = false
 end
 
-ActiveRecord::Base.establish_connection(
-  :adapter => "sqlite3",
-  :database => "db/artists.sqlite"
-)
 
 def drop_db
   DB.tables.each do |table|
